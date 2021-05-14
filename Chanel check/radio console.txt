@@ -1,0 +1,54 @@
+set comport com14 9600 8n1 (здесь вводим только номер порта)
+
+
+
+(NNCLtool (com12)> achno 142 setup :-26000051 get2 chno
+        achno 142 setup :-26000051 get2 chno
+        05 00 00 00 00 05 04 05 01 b3 ba 8c 01 01 02 84 8e 09 ad b3
+HOST 0xfffe
+MAC 0x18cbab3
+SETUP GET2
+
+chno: 0
+
+newcomers: 0
+
+done in 730,8279 ms)
+
+
+  
+
+achno 29 setup :-26000051 verget (команда позволяет узнать версию прошивки счетчика, вводим номер канала минус 1 и mac-счетчика. Можно ввести перед "setup" "amode 1" - это intro или "amode 2" - это ism)
+
+achno 142 setup :-60951887 set2 chno 35 (позволяет менять номер канала, вводим номер канала, неотнимая единицу и mac-счетчика)
+
+
+(NNCLtool (com12)> achno 142 setup :-60951889 set2 chno 90
+        achno 142 setup :-26000051 set2 chno 90
+        05 00 00 00 00 05 05 05 01 b3 ba 8c 01 01 02 84 8e 09 5a ce b2
+HOST 0xfffe
+MAC 0x18cbab3
+SETUP SET2
+
+newcomers: 0
+
+done in 731,7254 m)
+
+
+achno 35 setup :-60951889 get2 chno (узнать, на каком канале)
+
+(NNCLtool (com12)> achno 90 setup :-26000051 get2 chno
+        achno 90 setup :-26000051 get2 chno
+        05 00 00 00 00 05 04 05 01 b3 ba 8c 01 01 02 84 5a 09 d5 bc
+HOST 0xfffe
+MAC 0x18cbab3
+SETUP GET2
+
+chno: 90
+
+newcomers: 0
+
+done in 1748,8694 ms)
+
+
+achno 35 amode 1 hello br hi 5 
